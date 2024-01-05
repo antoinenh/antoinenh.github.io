@@ -17,11 +17,13 @@ const WINNING_COMB = [
 const cellElements = document.querySelectorAll('[data-cell]');
 const winningMessageElement = document.querySelector('#winningMessage');
 const winningMessageTextElement = document.querySelector('[data-winning-message-text]');
-const restartButton = document.querySelector("#restartButton");
+const restartButton = document.getElementById("restartButton");
 
-restartButton.addEventListener('click', startGame());
+restartButton.addEventListener('click', startGame);
+//console.log(restartButton)
 
 let xTurn = true;
+startGame()
 
 function startGame() {
     cellElements.forEach(cell => {
